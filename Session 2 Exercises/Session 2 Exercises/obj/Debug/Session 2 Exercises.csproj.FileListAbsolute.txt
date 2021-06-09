@@ -1,0 +1,7 @@
+C:\Users\Angelos\C# Projects\Session 2 Exercises\Session 2 Exercises\bin\Debug\Session 2 Exercises.exe.config
+C:\Users\Angelos\C# Projects\Session 2 Exercises\Session 2 Exercises\bin\Debug\Session 2 Exercises.exe
+C:\Users\Angelos\C# Projects\Session 2 Exercises\Session 2 Exercises\bin\Debug\Session 2 Exercises.pdb
+C:\Users\Angelos\C# Projects\Session 2 Exercises\Session 2 Exercises\obj\Debug\Session 2 Exercises.csproj.AssemblyReference.cache
+C:\Users\Angelos\C# Projects\Session 2 Exercises\Session 2 Exercises\obj\Debug\Session 2 Exercises.csproj.CoreCompileInputs.cache
+C:\Users\Angelos\C# Projects\Session 2 Exercises\Session 2 Exercises\obj\Debug\Session 2 Exercises.exe
+C:\Users\Angelos\C# Projects\Session 2 Exercises\Session 2 Exercises\obj\Debug\Session 2 Exercises.pdb

@@ -1,0 +1,7 @@
+C:\Users\Angelos\Documents\C# Projects\Session 4 Exercises\Session 4 Exercises\bin\Debug\Session 4 Exercises.exe.config
+C:\Users\Angelos\Documents\C# Projects\Session 4 Exercises\Session 4 Exercises\bin\Debug\Session 4 Exercises.exe
+C:\Users\Angelos\Documents\C# Projects\Session 4 Exercises\Session 4 Exercises\bin\Debug\Session 4 Exercises.pdb
+C:\Users\Angelos\Documents\C# Projects\Session 4 Exercises\Session 4 Exercises\obj\Debug\Session 4 Exercises.csproj.AssemblyReference.cache
+C:\Users\Angelos\Documents\C# Projects\Session 4 Exercises\Session 4 Exercises\obj\Debug\Session 4 Exercises.csproj.CoreCompileInputs.cache
+C:\Users\Angelos\Documents\C# Projects\Session 4 Exercises\Session 4 Exercises\obj\Debug\Session 4 Exercises.exe
+C:\Users\Angelos\Documents\C# Projects\Session 4 Exercises\Session 4 Exercises\obj\Debug\Session 4 Exercises.pdb
