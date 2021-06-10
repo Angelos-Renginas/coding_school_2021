@@ -9,13 +9,13 @@ namespace Session_8_Exercises {
     public class Course {
 
         // PROPERTIES
+        public Guid ID { get; set; }
         public string Subject { get; set; }
-        public int Hours { get; set; }
         public CoursesCategoryEnum Category { get; set; }
 
         // CONSTRUCTOR
         public Course() {
-
+            ID = Guid.NewGuid();
         }
 
         // METHODS
@@ -24,6 +24,28 @@ namespace Session_8_Exercises {
     public class Student {
 
         public Guid ID { get; private set; }
+        public String Name { get; set; }
+        public int Age { get; set; }
+        public int RegistrationNumber { get; set; }
+        //public Course[] Courses { get; set; }
+
+        public Student() {
+            ID = Guid.NewGuid();
+          
+        }
+    }
+
+    public class Professor {
+
+        public Guid ID { get; private set; }
+        public String Name { get; set; }
+        public int Age { get; set; }
+        public string Rank { get; set; }
+        //public Course[] Courses { get; set; }
+
+        public Professor() {
+            ID = Guid.NewGuid();
+        }
 
 
     }
@@ -48,7 +70,6 @@ namespace Session_8_Exercises {
             Course physics1 = new Course() {
                 Subject = "Quantum Physics",
                 Category = CoursesCategoryEnum.Physics,
-                Hours = 100
             };
             courses.Add(physics1);
 
@@ -56,14 +77,12 @@ namespace Session_8_Exercises {
             Course physics2 = new Course() {
                 Subject = "Electo-Dynamics",
                 Category = CoursesCategoryEnum.Physics,
-                Hours = 50
             };
             courses.Add(physics2);
 
             Course static1 = new Course();
             static1.Subject = "Static";
             static1.Category = CoursesCategoryEnum.CivilEngineering;
-            static1.Hours = 500;
             
             courses.Add(static1);
 
@@ -71,25 +90,25 @@ namespace Session_8_Exercises {
             List<Course> physicsCourses = courses.FindAll(x => x.Category == CoursesCategoryEnum.Physics);
 
 
-            List<Course> physicsCourses100  = physicsCourses.FindAll(course => course.Hours >= 100);
+            //List<Course> physicsCourses100  = physicsCourses.FindAll(course => course.Hours >= 100);
 
 
 
-            List<Course> physicsCourses2 = new List<Course>(); 
-            foreach  (Course x in courses) {
+            //List<Course> physicsCourses2 = new List<Course>(); 
+            //foreach  (Course x in courses) {
 
-                if (x.Category == CoursesCategoryEnum.Physics && x.Hours >= 100) {
-                    physicsCourses2.Add(x);
-                }
-            }
+            //    if (x.Category == CoursesCategoryEnum.Physics && x.Hours >= 100) {
+            //        physicsCourses2.Add(x);
+            //    }
+            //}
 
-            List<Course> physicsCourses3 = new List<Course>();
-            foreach (Course y in courses) {
+            //List<Course> physicsCourses3 = new List<Course>();
+            //foreach (Course y in courses) {
 
-                if (y.Hours >= 100) {
-                    physicsCourses3.Add(y);
-                }
-            }
+            //    if (y.Hours >= 100) {
+            //        physicsCourses3.Add(y);
+            //    }
+            //}
 
 
 
@@ -101,9 +120,6 @@ namespace Session_8_Exercises {
 
             //Courses physics1 = new Courses();
             //physics1.Category = CoursesCategoryEnum.Physics;
-
-           
-
 
         }
 

@@ -13,11 +13,19 @@ namespace Session_8_Exercises {
     public partial class StudentForm : Form {
 
         // PROPERTIES ????
-        
+        public Student MyStudent { get; set; }
+        public MainForm MyMainForm { get; set; }
 
         // CONSTRUCTOR
         public StudentForm() {
             InitializeComponent();
+        }
+
+
+        public StudentForm(MainForm mainForm, Student student) {
+            InitializeComponent();
+            MyMainForm = mainForm;
+            MyStudent = student;
         }
 
 
@@ -26,17 +34,24 @@ namespace Session_8_Exercises {
 
         }
 
-        private void button1_Click(object sender, EventArgs e) {
-            
+        private void OkStudentButton_Click(object sender, EventArgs e) {
+
             // todo: MODIFY THE OBJECT STUDENT -- CLOSE THE FORM!
+            MyStudent.Name = this.NameTextEdit.Text;
+            MyStudent.Age = Convert.ToInt32(this.AgeTextEdit.Text);
+            MyStudent.RegistrationNumber = Convert.ToInt32(this.RegistrationTextEdit.Text);
             
+            this.MyMainForm.PassValue(MyStudent);
+            this.Close();
+
         }
 
-        private void button2_Click(object sender, EventArgs e) {
+        private void CancelButton_Click(object sender, EventArgs e) {
 
             // todo: CANCEL EVERYTHING -- DO NOT MODIFY THE OBJECT!
+            this.DialogResult = DialogResult.OK;
         }
 
-    
+      
     }
 }

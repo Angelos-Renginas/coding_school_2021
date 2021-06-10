@@ -1,4 +1,7 @@
 ﻿
+using System.Drawing;
+using System.Windows.Forms;
+
 namespace Session_8_Exercises {
     partial class MainForm {
         /// <summary>
@@ -24,86 +27,161 @@ namespace Session_8_Exercises {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.EpsilonNetLabel = new System.Windows.Forms.Label();
+            this.AddCourseButton = new System.Windows.Forms.Button();
+            this.AddStudentButton = new System.Windows.Forms.Button();
+            this.AddProfessorButton = new System.Windows.Forms.Button();
+            this.Exercises8Label = new System.Windows.Forms.Label();
+            this.CourseListView = new System.Windows.Forms.ListView();
+            this.StudentListView = new System.Windows.Forms.ListView();
+            this.ProfessorListView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // button2
+            // ExitButton
             // 
-            this.button2.Location = new System.Drawing.Point(645, 458);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 32);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitButton.BackColor = System.Drawing.Color.White;
+            this.ExitButton.ForeColor = System.Drawing.Color.Black;
+            this.ExitButton.Location = new System.Drawing.Point(670, 443);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(156, 38);
+            this.ExitButton.TabIndex = 2;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // label1
+            // EpsilonNetLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(62, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(595, 39);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "University Management Application";
+            this.EpsilonNetLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EpsilonNetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EpsilonNetLabel.ForeColor = System.Drawing.Color.White;
+            this.EpsilonNetLabel.Location = new System.Drawing.Point(190, 31);
+            this.EpsilonNetLabel.Name = "EpsilonNetLabel";
+            this.EpsilonNetLabel.Size = new System.Drawing.Size(471, 39);
+            this.EpsilonNetLabel.TabIndex = 6;
+            this.EpsilonNetLabel.Text = "EpsilonNet Coding School";
+            this.EpsilonNetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // AddCourseButton
             // 
-            this.button3.Location = new System.Drawing.Point(69, 70);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 117);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Add Course...";
-            this.button3.UseVisualStyleBackColor = true;
+            this.AddCourseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddCourseButton.BackColor = System.Drawing.Color.White;
+            this.AddCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.AddCourseButton.Location = new System.Drawing.Point(172, 150);
+            this.AddCourseButton.Name = "AddCourseButton";
+            this.AddCourseButton.Size = new System.Drawing.Size(139, 83);
+            this.AddCourseButton.TabIndex = 7;
+            this.AddCourseButton.Text = "Add\r\nCourse";
+            this.AddCourseButton.UseVisualStyleBackColor = false;
+            this.AddCourseButton.Click += new System.EventHandler(this.AddCourseButton_Click);
             // 
-            // button4
+            // AddStudentButton
             // 
-            this.button4.Location = new System.Drawing.Point(217, 70);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 117);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Add Student...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.AddStudentButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddStudentButton.BackColor = System.Drawing.Color.White;
+            this.AddStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.AddStudentButton.Location = new System.Drawing.Point(356, 150);
+            this.AddStudentButton.Name = "AddStudentButton";
+            this.AddStudentButton.Size = new System.Drawing.Size(139, 83);
+            this.AddStudentButton.TabIndex = 8;
+            this.AddStudentButton.Text = "Add\r\nStudent";
+            this.AddStudentButton.UseVisualStyleBackColor = false;
+            this.AddStudentButton.Click += new System.EventHandler(this.AddStudentButton_Click);
             // 
-            // button5
+            // AddProfessorButton
             // 
-            this.button5.Location = new System.Drawing.Point(363, 70);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 117);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Add Professor...";
-            this.button5.UseVisualStyleBackColor = true;
+            this.AddProfessorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddProfessorButton.BackColor = System.Drawing.Color.White;
+            this.AddProfessorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.AddProfessorButton.Location = new System.Drawing.Point(547, 150);
+            this.AddProfessorButton.Name = "AddProfessorButton";
+            this.AddProfessorButton.Size = new System.Drawing.Size(139, 83);
+            this.AddProfessorButton.TabIndex = 9;
+            this.AddProfessorButton.Text = "Add\r\nProfessor\r\n";
+            this.AddProfessorButton.UseVisualStyleBackColor = false;
+            this.AddProfessorButton.Click += new System.EventHandler(this.AddProfessorButton_Click);
+            // 
+            // Exercises8Label
+            // 
+            this.Exercises8Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Exercises8Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.Exercises8Label.ForeColor = System.Drawing.Color.White;
+            this.Exercises8Label.Location = new System.Drawing.Point(259, 90);
+            this.Exercises8Label.Name = "Exercises8Label";
+            this.Exercises8Label.Size = new System.Drawing.Size(330, 37);
+            this.Exercises8Label.TabIndex = 10;
+            this.Exercises8Label.Text = "Session 8 Exercises";
+            this.Exercises8Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CourseListView
+            // 
+            this.CourseListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.CourseListView.HideSelection = false;
+            this.CourseListView.Location = new System.Drawing.Point(172, 274);
+            this.CourseListView.Name = "CourseListView";
+            this.CourseListView.Size = new System.Drawing.Size(138, 151);
+            this.CourseListView.TabIndex = 11;
+            this.CourseListView.UseCompatibleStateImageBehavior = false;
+            this.CourseListView.View = System.Windows.Forms.View.List;
+            // 
+            // StudentListView
+            // 
+            this.StudentListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.StudentListView.HideSelection = false;
+            this.StudentListView.Location = new System.Drawing.Point(356, 274);
+            this.StudentListView.Name = "StudentListView";
+            this.StudentListView.Size = new System.Drawing.Size(139, 151);
+            this.StudentListView.TabIndex = 12;
+            this.StudentListView.UseCompatibleStateImageBehavior = false;
+            this.StudentListView.View = System.Windows.Forms.View.List;
+            this.StudentListView.SelectedIndexChanged += new System.EventHandler(this.StudentListView_SelectedIndexChanged);
+            // 
+            // ProfessorListView
+            // 
+            this.ProfessorListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ProfessorListView.HideSelection = false;
+            this.ProfessorListView.Location = new System.Drawing.Point(547, 274);
+            this.ProfessorListView.Name = "ProfessorListView";
+            this.ProfessorListView.Size = new System.Drawing.Size(139, 151);
+            this.ProfessorListView.TabIndex = 13;
+            this.ProfessorListView.UseCompatibleStateImageBehavior = false;
+            this.ProfessorListView.View = System.Windows.Forms.View.List;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 502);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(96)))), ((int)(((byte)(55)))));
+            this.ClientSize = new System.Drawing.Size(856, 504);
+            this.Controls.Add(this.ProfessorListView);
+            this.Controls.Add(this.StudentListView);
+            this.Controls.Add(this.CourseListView);
+            this.Controls.Add(this.Exercises8Label);
+            this.Controls.Add(this.AddProfessorButton);
+            this.Controls.Add(this.AddStudentButton);
+            this.Controls.Add(this.AddCourseButton);
+            this.Controls.Add(this.EpsilonNetLabel);
+            this.Controls.Add(this.ExitButton);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Name = "MainForm";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Text = "Main Form";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Label EpsilonNetLabel;
+        private System.Windows.Forms.Button AddCourseButton;
+        private System.Windows.Forms.Button AddStudentButton;
+        private System.Windows.Forms.Button AddProfessorButton;
+        private System.Windows.Forms.Label Exercises8Label;
+        private System.Windows.Forms.ListView CourseListView;
+        private System.Windows.Forms.ListView StudentListView;
+        private System.Windows.Forms.ListView ProfessorListView;
     }
 }
 
