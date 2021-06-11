@@ -13,7 +13,6 @@ using System.Windows.Forms;
 
 namespace Session_9_Exercises {
 
-    //test Git
 
     public partial class MainForm : Form {
 
