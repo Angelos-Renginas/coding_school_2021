@@ -52,6 +52,8 @@ namespace Session_8_Exercises {
             this.DialogResult = DialogResult.OK;
         }
 
-      
+        private void NameTextEdit_EditValueChanged(object sender, EventArgs e) {
+
+        }
     }
 }

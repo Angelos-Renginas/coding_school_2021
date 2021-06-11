@@ -29,13 +29,25 @@ namespace Session_8_Exercises {
 
             StudentForm studentForm = new StudentForm(this, student);
             studentForm.ShowDialog();
-
-
-
-            //TODO: WHEN FORM THE CLOSES ADD THE STUDENT TO A STUDENT LIST
-            
             
         }
+
+        private void AddCourseButton_Click(object sender, EventArgs e) {
+            Course course = new Course();
+
+            CourseForm courseForm = new CourseForm(this, course);
+            courseForm.ShowDialog();
+
+
+        }
+
+        private void AddProfessorButton_Click(object sender, EventArgs e) {
+            Professor professor = new Professor();
+            ProfessorForm professorForm = new ProfessorForm(this, professor);
+            professorForm.ShowDialog();
+        }
+
+
 
         public void PassValue(Student student) {
             
@@ -68,20 +80,7 @@ namespace Session_8_Exercises {
             Application.Exit();
         }
 
-        private void AddCourseButton_Click(object sender, EventArgs e) {
-            Course course = new Course();
-           
-            CourseForm courseForm = new CourseForm(this, course);
-            courseForm.ShowDialog();
-
-
-        }
-
-        private void AddProfessorButton_Click(object sender, EventArgs e) {
-            Professor professor = new Professor();
-            ProfessorForm professorForm = new ProfessorForm(this, professor);
-            professorForm.ShowDialog();
-        }
+      
 
       
 

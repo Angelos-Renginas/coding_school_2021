@@ -94,6 +94,7 @@ namespace Session_8_Exercises {
             this.NameTextEdit.Properties.Appearance.Options.UseFont = true;
             this.NameTextEdit.Size = new System.Drawing.Size(169, 22);
             this.NameTextEdit.TabIndex = 10;
+            this.NameTextEdit.EditValueChanged += new System.EventHandler(this.NameTextEdit_EditValueChanged);
             // 
             // AgeTextEdit
             // 
