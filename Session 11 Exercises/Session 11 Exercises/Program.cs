@@ -1,0 +1,25 @@
+using Session_11_Exercises.WUI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Session_11_Exercises {
+
+
+    static class Program {
+
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main() {
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MdiMainForm());
+
+        }
+    }
+}
