@@ -14,7 +14,7 @@ namespace Session_23_Exercises.Tests {
             fibonacciMock.Setup(x => x.FibonacciSeries(-1));
 
             var sut = new FibonacciSeriesCalculator(fibonacciMock.Object);
-            var expected = 0;
+            
 
 
             //Act & Assert
@@ -49,7 +49,7 @@ namespace Session_23_Exercises.Tests {
             fibonacciMock.Setup(x => x.FibonacciSeries(101));
 
             var sut = new FibonacciSeriesCalculator(fibonacciMock.Object);
-            var expected = 1;
+            
 
             //Act & Assert
             Assert.Throws<ArgumentException>(() => {
