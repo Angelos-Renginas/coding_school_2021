@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="epsilon-logo.png" type="image/gif" sizes="16x16">
+    <title>Session 24 Exercises</title>
+</head>
+<body>
+
+    <nav>
+        <h1>Επεξεργασία client</h1>
+        <table>
+            <th>
+                
+                <img id="saveButton" src="save.png" alt="save" style="width:15px;height:15px;">
+            </th>
+            <th>
+                <img id="backButton" src="arrow.png" alt="save" style="width:15px;height:15px;">
+            </th>
+        </table>
+    </nav>
+
+    
+
+    <div class="row">
+        <div class="col">
+            <label for="clId">Client-Id</label> 
+            <input type="text" id="clId"  placeholder="dcprojects_client"/> <br> <br>
+
+            <label for="type">Τύπος</label> 
+            <select  id="type">
+                <option value="authCode">AuthCode</option>
+                <option value="auebCode">AuebCode</option>
+                <option value="unipiCode">UnipiCode</option>
+                <option value="uoaCode">UoaCOde</option>
+            </select>  <br> <br>
+
+            <label for="origin">Προέλευση</label> 
+            <select id="origin">
+                <option value="system">System</option>
+                <option value="system1">System1</option>
+                <option value="system2">System2</option>
+                <option value="system3">System3</option>
+            </select>  <br> <br>
+
+            <label for="apiRes">Api Rescources</label> 
+            <input type="text" id="apiRes" /> <br> <br>
+
+        </div>
+        <div class="col">
+            <label for="name">Όνομα</label> 
+            <input type="text" id="name" placeholder="dcprojects_client" /><br><br>
+
+            <label for="active">Τύπος</label> 
+            <input class="checkbox" type="checkbox" id="active"/> <br> <br>
+
+            <label for="install">Εγκατάσταση</label> 
+            <select  id="cars">
+                <option value="tenant0">tenant0</option>
+                <option value="tenant1">tenant1</option>
+                <option value="tenant2">tenant2</option>
+                <option value="tenant3">tenant3</option>
+            </select>  <br> <br>
+
+            <label for="secret">Secret</label> 
+            <input type="input" id="secret" /> <br> <br>
+
+
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="row disabled">
+        <div class="col">
+            <label for="created">Δημιουργήθηκε από</label> 
+            <input type="text" id="created" disabled/> <br> <br>
+
+            <label for="updated">Ενημερώθηκε από</label> 
+            <input type="text" id="updated" disabled /> <br> <br>
+
+        </div>
+        <div class="col">
+            <label for="creationDate">Ημερομηνία Δημιουργίας</label> 
+            <input type="text" id="creationDate" disabled/><br><br>
+
+            <label for="updateDate">Ημερομηνία Ενημέρωσης</label> 
+            <input type="input" id="updateDate" disabled/> <br> <br>
+
+
+        </div>
+    </div>
+   
+    
+
+</body>
+</html>
