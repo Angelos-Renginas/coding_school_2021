@@ -6,9 +6,7 @@ namespace Session_23_Exercises {
 
         private readonly IFibonacciCalculator fibonacciCalculator;
 
-        public FibonacciCalculator(IFibonacciCalculator fibonacciCalculator) {
-            this.fibonacciCalculator = fibonacciCalculator;
-        }
+       
 
         public long FibonacciSeries(long n) {
             if (n == 0) {
