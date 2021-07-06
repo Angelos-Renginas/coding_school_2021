@@ -13,13 +13,13 @@ namespace Session_23_Exercises.Tests {
             var fibonacciMock = new Mock<IFibonacciCalculator>();
             fibonacciMock.Setup(x => x.FibonacciSeries(-1));
 
-            var sut = new FibonacciSeriesCalculator(fibonacciMock.Object);
+            var sut = new FibonacciCalculator(fibonacciMock.Object);
             
 
 
             //Act & Assert
             Assert.Throws<ArgumentException>(() => {
-                var actual = sut.CalculateFibonacci(-1);
+                var actual = sut.FibonacciSeries(-1);
             });
         }
 
@@ -31,11 +31,11 @@ namespace Session_23_Exercises.Tests {
             var fibonacciMock = new Mock<IFibonacciCalculator>();
             fibonacciMock.Setup(x => x.FibonacciSeries(0));
 
-            var sut = new FibonacciSeriesCalculator(fibonacciMock.Object);
+            var sut = new FibonacciCalculator(fibonacciMock.Object);
             var expected = 0;
 
             //Act
-            var actual = sut.CalculateFibonacci(0);
+            var actual = sut.FibonacciSeries(0);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -48,12 +48,12 @@ namespace Session_23_Exercises.Tests {
             var fibonacciMock = new Mock<IFibonacciCalculator>();
             fibonacciMock.Setup(x => x.FibonacciSeries(101));
 
-            var sut = new FibonacciSeriesCalculator(fibonacciMock.Object);
+            var sut = new FibonacciCalculator(fibonacciMock.Object);
             
 
             //Act & Assert
             Assert.Throws<ArgumentException>(() => {
-                var actual = sut.CalculateFibonacci(101);
+                var actual = sut.FibonacciSeries(101);
             });
         }
 
@@ -65,11 +65,11 @@ namespace Session_23_Exercises.Tests {
             var fibonacciMock = new Mock<IFibonacciCalculator>();
             fibonacciMock.Setup(x => x.FibonacciSeries(1));
 
-            var sut = new FibonacciSeriesCalculator(fibonacciMock.Object);
+            var sut = new FibonacciCalculator(fibonacciMock.Object);
             var expected = 1;
 
             //Act
-            var actual = sut.CalculateFibonacci(1);
+            var actual = sut.FibonacciSeries(1);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -84,12 +84,12 @@ namespace Session_23_Exercises.Tests {
             var fibonacciMock = new Mock<IFibonacciCalculator>();
             fibonacciMock.Setup(x => x.FibonacciSeries(n));
 
-            var sut = new FibonacciSeriesCalculator(fibonacciMock.Object);
+            var sut = new FibonacciCalculator(fibonacciMock.Object);
             
             var expected = fibonacci;
 
             //Act
-            var actual = sut.CalculateFibonacci(n);
+            var actual = sut.FibonacciSeries(n);
 
             //Assert
             Assert.Equal(expected, actual);
