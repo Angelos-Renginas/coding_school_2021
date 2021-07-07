@@ -1,0 +1,72 @@
+﻿body {
+    background-color: rgb(230, 249, 255);
+}
+
+.btn {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+input {
+    border-radius: 4px;
+    width: 300px;
+    border-width:1px;
+}
+
+tr {
+    padding-top: 10px;
+    margin-bottom: 3px;
+}
+
+td {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left:10px;
+    padding-right: 10px;
+}
+#activeStatus {
+    width: fit-content;
+}
+
+table th{
+    padding-right:40px;
+}
+
+tbody td{
+    padding-left:0px;
+}
+
+tbody tr {
+    padding-top: 5px;
+    padding-bottom:5px;
+}
+
+a #addCustomer {
+    background-color: green;
+    color:white;
+    border-radius:4px;
+    margin-bottom:30px;
+    margin-top:10px;
+}
+
+a #editCustomer {
+    background-color: #E0A800;
+    color: white;
+    border-radius: 4px;
+    height:30px;
+    padding-top:2px;
+    margin-top: 0px;
+    margin-right:5px;
+}
+
+
+#customersTable thead {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #009ccc;
+    border-bottom: 1px solid;
+}
+
+#customersTable tr:nth-child(even) {
+    background-color: #009ccc;
+}

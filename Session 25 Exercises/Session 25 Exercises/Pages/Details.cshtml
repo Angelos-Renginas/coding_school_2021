@@ -1,0 +1,47 @@
+﻿@page "{id}"
+@model Session_25_Exercises.Pages.DetailsModel
+@{
+}
+
+<div>
+    <form id="frmMain" method="post">
+        <input id="txtSelectedId" type="hidden" value="@Model.SelectedCustomer.ID">
+        <table>
+            <tr>
+                <td><label for="txtName">Name</label></td>
+                <td><input id="txtName" name="name" value="@Model.SelectedCustomer.Name" required="required"></td>
+            </tr>
+            <tr>
+                <td><label for="txtSurname">Surname</label></td>
+                <td><input id="txtSurname" name="surname" value="@Model.SelectedCustomer.Surname" required="required"></td>
+            </tr>
+            <tr>
+                <td><label for="txtAFM">AFM</label></td>
+                <td><input id="txtAFM" name="afm" value="@Model.SelectedCustomer.AFM" maxlength="9" minlength="9"></td>
+
+            </tr>
+            <tr>
+                <td><label for="activeStatus">Status</label></td>
+                <td><input type="checkbox" id="activeStatus" name="status" value="@Model.SelectedCustomer.Active"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="display: flex">
+                        <button class="btn btn-warning" asp-page-handler="cancel"  formnovalidate>Cancel</button>
+                        @if (Model.SelectedCustomer.ID > 0) {
+                            <button class="btn btn-danger" asp-page-handler="delete">Delete</button>
+                        }
+                        @if (Model.SelectedCustomer.Name == null) {
+                        }
+                        <button class="btn btn-success" type="submit">Save</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+@section Scripts
+{
+    <link href="~/css/style.css" rel="stylesheet" />
+}

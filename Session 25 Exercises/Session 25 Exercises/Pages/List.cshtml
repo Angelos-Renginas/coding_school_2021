@@ -1,0 +1,52 @@
+﻿@page
+@model Session_25_Exercises.Pages.ListModel
+@{
+}
+
+<a href="/Details/0">
+    <button id="addCustomer" class="btn addbtn">Add New Customer</button>
+</a>
+
+
+<table id="customersTable">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
+                AFM
+            </th>
+            <th>
+                Active
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Customers) {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.AFM</td>
+                <td>@item.Active</td>
+                <td><a href="/Details/@item.ID">
+                        <button id="editCustomer" class="btn addbtn">Edit</button>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <link href="~/css/style.css" rel="stylesheet" />
+}
