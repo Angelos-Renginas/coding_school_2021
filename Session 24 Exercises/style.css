@@ -54,6 +54,7 @@ table{
 
 #active{
     width: fit-content;
+    margin-bottom: 10px;
 }
 
 .col input, .col select{
