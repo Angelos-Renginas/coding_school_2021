@@ -208,19 +208,38 @@ namespace CoursesScheduler.WUI {
             }
 
             foreach (Schedule schedule in UniveristyObject.ScheduleList) {
+
                 Student student = UniveristyObject.Students.Find(x => x.Id == schedule.StudentID);
                 Course course = UniveristyObject.Courses.Find(x => x.Id == schedule.CourseID);
                 Professor professor = UniveristyObject.Professors.Find(x => x.Id == schedule.ProfessorID);
-                string date = schedule.Calendar;
 
-                string[] scheduleDataArray = new string[] { student.FullName, professor.FullName, course.Description, date };
+                string date = schedule.Calendar;
+                string studentFullName = student.Name + " " + student.Surname;
+                string professorFullName = professor.Name + " " + professor.Surname;
+
+                Tuple<int, int> myDateTuple = ConvertToTimeHours(Convert.ToDateTime(date));
+                string dateFormat = string.Format(" {0},  {1}-{2}", Convert.ToDateTime(date).ToShortDateString(), myDateTuple.Item1 , myDateTuple.Item2);
+                string[] scheduleDataArray = new string[] { studentFullName, professorFullName, course.Subject, dateFormat };
                 ctrlScheduleListView.Items.Add(new ListViewItem(scheduleDataArray));
             }
            
 
-
         }
 
+        private Tuple<int, int> ConvertToTimeHours(DateTime myDate) {
+
+            int first;
+            int last;
+            if (myDate.Hour % 2 == 0) {
+                first = myDate.Hour - 1;
+                last = myDate.Hour + 1;
+            }
+            else {
+                first = myDate.Hour;
+                last = myDate.Hour + 2;
+            }
+            return new Tuple<int, int>(first, last);
+        }
 
         private void LoadListColumns() {
 

@@ -31,6 +31,10 @@ namespace CoursesScheduler {
             SelectCourse();
         }
 
+        public struct HourZone {
+            public int StartHour;
+            public string FinishHour;
+        }
 
         #region Event Handlers
 
@@ -185,7 +189,6 @@ namespace CoursesScheduler {
 
                 DateTime myDate = Convert.ToDateTime(mySchedule.Calendar);
                 DateTime scheduleDate = Convert.ToDateTime(schedule.Calendar);
-
                 Student student = UniversityData.Students.Find(x => x.Id == mySchedule.StudentID);
 
                 if (student.Id == schedule.StudentID && myDate.Date == scheduleDate.Date) {
@@ -209,8 +212,10 @@ namespace CoursesScheduler {
                 DateTime scheduleDate = Convert.ToDateTime(schedule.Calendar);
 
                 TimeSpan timeDifference = myDate - scheduleDate;
+                Tuple<int, int> myDateTuple = ConvertToTimeHours(myDate);
+                Tuple<int, int> scheduleDateTuple = ConvertToTimeHours(scheduleDate);
 
-                if (student.Id == schedule.StudentID && myDate.Date == scheduleDate.Date && timeDifference.Hours > -2 && timeDifference.Hours < 2) {
+                if (student.Id == schedule.StudentID && myDate.Date == scheduleDate.Date && myDateTuple.Equals(scheduleDateTuple)) {
                     flag = true;
                     break;
                 }
@@ -228,9 +233,12 @@ namespace CoursesScheduler {
                 Professor professor = UniversityData.Professors.Find(x => x.Id == mySchedule.ProfessorID);
                 DateTime myDate = Convert.ToDateTime(mySchedule.Calendar);
                 DateTime scheduleDate = Convert.ToDateTime(schedule.Calendar);
-                TimeSpan timeDifference = myDate - scheduleDate;
 
-                if (professor.Id == schedule.ProfessorID && schedule.CourseID != mySchedule.CourseID && timeDifference.Hours > -2 && timeDifference.Hours < 2) {
+                TimeSpan timeDifference = myDate - scheduleDate;
+                Tuple<int, int> myDateTuple = ConvertToTimeHours(myDate);
+                Tuple<int, int> scheduleDateTuple = ConvertToTimeHours(scheduleDate);
+
+                if (professor.Id == schedule.ProfessorID && schedule.CourseID != mySchedule.CourseID && myDateTuple.Equals(scheduleDateTuple)) {
                     flag = true;
                     break;
                 }
@@ -250,7 +258,10 @@ namespace CoursesScheduler {
 
                 Professor professor = UniversityData.Professors.Find(x => x.Id == mySchedule.ProfessorID);
 
-                if (professor.Id == schedule.ProfessorID && schedule.CourseID != mySchedule.CourseID && myDate.Date == scheduleDate.Date) {
+                Tuple<int, int> myDateTuple = ConvertToTimeHours(myDate);
+                Tuple<int, int> scheduleDateTuple = ConvertToTimeHours(scheduleDate);
+
+                if (professor.Id == schedule.ProfessorID && myDate.Date == scheduleDate.Date && (schedule.CourseID != mySchedule.CourseID)||(schedule.CourseID == mySchedule.CourseID && !myDateTuple.Equals(scheduleDateTuple)) ) {
                     coursestaught++;
                 }
                 if (coursestaught == 4) {
@@ -259,6 +270,22 @@ namespace CoursesScheduler {
                 }
             }
             return flag;
+        }
+
+
+        private Tuple<int, int> ConvertToTimeHours(DateTime myDate) {
+
+            int first;
+            int last;
+            if (myDate.Hour % 2 == 0) {
+                first = myDate.Hour - 1;
+                last = myDate.Hour + 1;
+            }
+            else {
+                first = myDate.Hour;
+                last = myDate.Hour + 2;
+            }
+            return new Tuple<int, int>(first, last);
         }
 
         #endregion
