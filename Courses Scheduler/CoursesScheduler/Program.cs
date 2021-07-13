@@ -17,10 +17,9 @@ namespace CoursesScheduler {
         [STAThread]
         static void Main() {
 
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DataForm1());
+            Application.Run(new SchedulerForm());
 
         }
     }
