@@ -261,7 +261,7 @@ namespace CoursesScheduler {
                 Tuple<int, int> myDateTuple = ConvertToTimeHours(myDate);
                 Tuple<int, int> scheduleDateTuple = ConvertToTimeHours(scheduleDate);
 
-                if (professor.Id == schedule.ProfessorID && myDate.Date == scheduleDate.Date && (schedule.CourseID != mySchedule.CourseID)||(schedule.CourseID == mySchedule.CourseID && !myDateTuple.Equals(scheduleDateTuple)) ) {
+                if (professor.Id == schedule.ProfessorID && myDate.Date == scheduleDate.Date && ((schedule.CourseID != mySchedule.CourseID)||(schedule.CourseID == mySchedule.CourseID && !myDateTuple.Equals(scheduleDateTuple))) ) {
                     coursestaught++;
                 }
                 if (coursestaught == 4) {
